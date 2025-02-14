@@ -3,14 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moja spletna stran</title>
+    <title>Moja Preprosta Spletna Stran</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        h1 { color: #3498db; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; text-align: center; background: linear-gradient(135deg, #4a90e2, #9013fe); color: white; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; }
+        h1 { font-size: 3em; margin-bottom: 10px; }
+        p { font-size: 1.2em; }
+        form { margin-top: 20px; background: rgba(255, 255, 255, 0.2); padding: 20px; border-radius: 10px; display: flex; flex-direction: column; width: 300px; }
+        input, textarea, button { padding: 10px; margin: 5px; border: none; border-radius: 5px; }
+        input, textarea { width: 100%; }
+        button { background-color: #ffcc00; cursor: pointer; font-weight: bold; }
+        button:hover { background-color: #ffaa00; }
     </style>
 </head>
 <body>
-    <h1>Pozdravljen, svet!</h1>
-    <p>To je moja prva GitHub Pages spletna stran.</p>
+
+    <h1>Dobrodošli!</h1>
+    <p>To je preprosta spletna stran z obrazcem za stik.</p>
+
+    <form action="https://formspree.io/f/mvojtest" method="POST">
+        <input type="text" name="name" placeholder="Vaše ime" required>
+        <input type="email" name="email" placeholder="Vaš e-naslov" required>
+        <textarea name="message" rows="4" placeholder="Vaše sporočilo" required></textarea>
+        <button type="submit">Pošlji</button>
+    </form>
+
 </body>
 </html>
